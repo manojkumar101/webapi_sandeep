@@ -33,9 +33,7 @@ function firstAPI(req,res) {
 async function secondAPI(req,res) {
   try {
     let userINfo=res.locals.tokenInfo
-    console.log(" ~ userINfo", userINfo)
-    console.log(" ~ userINfo", userINfo)
-    console.log(" ~ userINfo", userINfo)
+  
     console.log("ndAPI ~ req", req.body.name)
   const cacheResponseQuery=`select * from service_request_cache where id = ?`;
   const result= await  query(cacheResponseQuery,[userINfo.id])
